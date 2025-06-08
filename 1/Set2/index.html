@@ -22,15 +22,15 @@
     <h1>Register</h1>
 
     <form>
-        Name: <input type="text" name="name" id="name" placeholder="Name"><br><br>
-        Address: <textarea name="address" id="address" placeholder="Address"></textarea><br><br>
-        Date of Birth: <input type="date" id="dob" name="dob"><br><br>
+        Name: <input type="text" name="name" id="name" placeholder="Name" required><br><br>
+        Address: <textarea name="address" id="address" placeholder="Address" required></textarea><br><br>
+        Date of Birth: <input type="date" id="dob" name="dob" required><br><br>
         Gender: 
-        <select name="gender" id="gender">
+        <select name="gender" id="gender" required>
             <option value="male">Male</option>
             <option value="female">Female</option>
         </select><br><br>
-        E-Mail ID: <input type="email" name="email" id="email"><br><br>
+        E-Mail ID: <input type="email" name="email" id="email" required><br><br>
         <button type="button" id="submitbtn" onclick="validate()">Submit</button>
     </form>
     <script>
