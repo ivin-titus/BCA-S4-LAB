@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        /* Ignore styles, not important */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        form {
+            border: 2px dashed gold;
+            padding: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Register</h1>
+
+    <form>
+        Name: <input type="text" name="name" id="name" placeholder="Name"><br><br>
+        Address: <textarea name="address" id="address" placeholder="Address"></textarea><br><br>
+        Date of Birth: <input type="date" id="dob" name="dob"><br><br>
+        Gender: 
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+        E-Mail ID: <input type="email" name="email" id="email"><br><br>
+        <button type="button" id="submitbtn" onclick="validate()">Submit</button>
+    </form>
+    <script>
+        function validate() {
+            const name = document.getElementById('name').value;
+            const addr = document.getElementById('address').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.getElementById('gender').value;
+            const email = document.getElementById('email').value;
+            const submitbtn = document.getElementById('submitbtn');
+
+            // must one : empty field check
+            if (!name || !addr || !dob || !gender || !email ) {
+                alert("Please fill all fields");
+                return;
+            }
+
+            // must one: simple email validation
+            if (!email.includes('@') || !email.includes('.')) {
+                alert("Enter a valid email");
+                return;
+            }
+
+            // optional, uses regular expression, more accurate
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert("Enter a valid email address");
+                return;
+            }
+
+            alert("Form submitted successfully")
+        }
+    </script>
+</body>
+</html>
