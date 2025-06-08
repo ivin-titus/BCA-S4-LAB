@@ -1,0 +1,20 @@
+
+1. Use Linux commands to
+(a) Display current working directory
+    pwd
+(b) Change directory to the parent directory
+    cd ..
+(c) Change directory to a subdirectory of current working directory
+    cd ./sub_dir
+(d) Display all files in your directory with “.c” extension.
+    ls *.c
+(e) Create a file “student.txt” and store name of five students
+    cat > student.txt
+        Ivan Ivin Jacob Jesvin Jeswin
+    press 'ctrl + d' once
+(f) Add two more names to “student.txt”
+    cat >> student.txt
+        Jophin Joseph
+    press 'ctrl + d' once
+(g) Give write permission to others for “student.txt”
+    chmod o+w student.txt
